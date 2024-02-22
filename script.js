@@ -12,11 +12,13 @@ async function fetchNews(query) {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
+        console.log(data); // Log the response data
         bindData(data.articles);
     } catch (error) {
         console.error('Error fetching news:', error);
     }
 }
+
 
 function bindData(articles) {
     const cardsContainer = document.getElementById("cards-container");
