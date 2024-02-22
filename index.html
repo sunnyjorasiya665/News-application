@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()">
+                <img src="news.png" alt="logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li id = "entertainment" onclick="onNavItemClick('entertainment')" class="active hover-links nav-item ">Entertainment</li>
+                    <li id="finance" onclick="onNavItemClick('finance')" class="active hover-links nav-item ">Finance</li>
+                    <li id="cricket" onclick="onNavItemClick('cricket')" class="active hover-links nav-item ">Cricket</li>
+                </ul>
+            </div>
+            <div id="search-button" class="search-bar flex">
+                <input type="text" id="search-text" class="news-input" placeholder="e.g. Science">
+                <button class="search">Search</button>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="card-container container flex" id="cards-container">
+           
+            </div>
+            
+            <template id="template-news-card">
+                <div class="card">
+                    <div class="card-header">
+                        <img id="news-img" src="https://via.placeholder.com/200x200" alt="news-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 id="news-title">This is the Title</h3>
+                        <h6 class="news-source" id="news-source">this is subtitle</h6>
+                        <p class="news-desc" id="news-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur quidem beatae
+                            exercitationem, atque ad veritatis vel voluptatibus non ea.
+                        </p>
+                    </div>
+            </template>
+
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
